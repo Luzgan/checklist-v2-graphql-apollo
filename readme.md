@@ -22,4 +22,4 @@ So it is a small todo app. It is mostly focuses on using actual Apollo and Graph
 # Unanswered (yet?) questions 
 * How to handle optimistic update of deletion? Should we be doing optimistic update of deletion at all?
 
-If you have opinion on design choice or you simply know that something here should be done differently - feel free to write an issue. I posted this here for mine and community benefit.
+If you have opinion on design choice or you simply know that something here should be done differently - feel free to write an issue. I posted this here for my and community benefit.
