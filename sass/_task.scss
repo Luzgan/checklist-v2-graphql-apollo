@@ -1,0 +1,27 @@
+.task {
+
+  & .btn {
+    color: green;
+  }
+
+  &.done {
+    & .task__name {
+      color: grey;
+      text-decoration: line-through;
+    }
+
+    & .btn {
+      color: red;
+    }
+  }
+
+  &.creating {
+    & .task__name {
+      color: grey;
+    }
+
+    & .btn {
+      color: grey;
+    }
+  }
+}

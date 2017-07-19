@@ -1,0 +1,57 @@
+schema {
+  query: RootQuery
+  mutation: RootMutation
+}
+
+type AllTasks {
+  tasks: [Task]
+  lastId: String
+  numberReturned: Int
+}
+
+type RootMutation {
+  # Task repository
+  taskRepositoryMutation: TaskRepositoryMutation
+}
+
+type RootQuery {
+  # User repository
+  userRepositoryQuery: UserRepositoryQuery
+
+  # Task repository
+  taskRepositoryQuery: TaskRepositoryQuery
+}
+
+type Task {
+  id: String
+  name: String
+  status: TaskStatusEnum
+}
+
+type TaskRepositoryMutation {
+  addTask(name: String): Task
+  markDone(id: String): Task
+  deleteTask(id: String): Boolean
+}
+
+type TaskRepositoryQuery {
+  # A list of the tasks in the database
+  allTasks(limit: Int, lastId: String): AllTasks
+
+  # Total count of tasks
+  tasksCount: Int
+}
+
+enum TaskStatusEnum {
+  READY
+  DONE
+}
+
+type User {
+  name: String
+  status: String
+}
+
+type UserRepositoryQuery {
+  user: User
+}

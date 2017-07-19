@@ -1,0 +1,11 @@
+const config = {
+  db: {
+    user: '',
+    password: '',
+    host: '',
+    port: '',
+    name: '',
+  },
+};
+
+export default config;
